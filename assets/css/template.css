@@ -20,6 +20,9 @@ header{
 .column{
 	flex-direction: column;
 }
+.row{
+	flex-direction: row;
+}
 .flex{
 	display: flex;
 }
@@ -92,7 +95,7 @@ header{
 	font-size: 21px;
 }
 #banner .banner_widgets{
-	height: 210px;
+	height: 250px;
 	background-color: #39ffe9;
 	display: flex;
 }
@@ -101,7 +104,7 @@ header{
 .banner_widgets .bn_wg3{
 	flex:1;
 	color:#fff;
-	
+	padding: 15px;
 }
 
 .banner_widgets .bn_wg1{
@@ -112,4 +115,69 @@ header{
 }
 .banner_widgets .bn_wg3{	
 	background-color: #2b4c99;
+}
+
+.bn_wg_title{
+	font-size: 22px;
+}
+.bn_wg_content{
+	font-size: 14px; 
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.bn_wg_button{
+	display: inline-block;
+	border:1px solid #fff;
+	background-color: none;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration:none;
+	font-size: 16px;
+	color: #fff; 
+	transition:background-color  0.4s linear;
+}
+.bn_wg_button:hover{
+	color: #0079c7; 
+	background-color: #fff; 
+
+}
+.bn_wg_info{
+	display: flex;
+	border-bottom: 1px solid #fff;
+	padding: 10px 0;
+	font-size: 14px;
+}
+.bn_wg_info .left{
+	flex:1;
+	text-align:left;
+}
+.bn_wg_info .right{
+	flex:1;		
+	text-align:right;
+}
+
+/* CONTENT */
+#content  section{
+	height: 500px;
+	flex:2;
+}
+#content aside{
+	height: 500px;
+	flex: 1;
+}
+
+.widget-title{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.widget-title-text{
+	color:#000;
+	font-size: 21px;
+	font-weight: bold;
+}
+.widget-title-bar{
+	margin-top: 10px;
+	width: 60px;
+	height: 3px;
+	background-color: #39aae1;
 }
