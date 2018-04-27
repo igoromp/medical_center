@@ -2,10 +2,16 @@
 
 *{
 	font-family: "Oxygen",sans-serif;
-}
-body{
 	margin: 0;
 	padding: 0;
+}
+
+body{
+	
+}
+a{
+	text-decoration: none;
+	color:#0079c7;
 }
 header{
 	display: flex;
@@ -25,10 +31,29 @@ header{
 }
 .flex{
 	display: flex;
+	flex-wrap: wrap;
 }
 .center{
 	justify-content: center;
 }
+.space-around{
+	justify-content: space-around;
+}
+.space-between{
+	justify-content: space-between;
+}
+
+/* TEXT-ALIGN */
+.tcenter{
+	text-align: center;
+}
+.tleft{
+	text-align: left;
+}
+.tright{
+	text-align: right;
+}
+
 /* HEADER */
 .logo{
 	
@@ -96,24 +121,21 @@ header{
 }
 #banner .banner_widgets{
 	height: 250px;
-	background-color: #39ffe9;
 	display: flex;
 }
-.banner_widgets .bn_wg1,
-.banner_widgets .bn_wg2,
-.banner_widgets .bn_wg3{
+.bn_wg{
 	flex:1;
 	color:#fff;
 	padding: 15px;
 }
-
-.banner_widgets .bn_wg1{
+/* CORES PADROES DO SITE */
+.sky{
 	background-color: #39aae1;
 }
-.banner_widgets .bn_wg2{	
+.info{	
 	background-color: #0079c7;
 }
-.banner_widgets .bn_wg3{	
+.ocean{	
 	background-color: #2b4c99;
 }
 
@@ -134,10 +156,10 @@ header{
 	text-decoration:none;
 	font-size: 16px;
 	color: #fff; 
-	transition:background-color  0.4s linear;
+	transition:background-color  0.2s linear;
 }
 .bn_wg_button:hover{
-	color: #0079c7; 
+	color: #39aae1; 
 	background-color: #fff; 
 
 }
@@ -157,12 +179,11 @@ header{
 }
 
 /* CONTENT */
+
 #content  section{
-	height: 500px;
 	flex:2;
 }
 #content aside{
-	height: 500px;
 	flex: 1;
 }
 
@@ -180,4 +201,217 @@ header{
 	width: 60px;
 	height: 3px;
 	background-color: #39aae1;
+}
+.widget-body{
+	margin-top: 20px;
+	justify-content: space-around;
+}
+.widget-rect{
+	margin-bottom: 30px;
+}
+.rect{
+	width: 100px;
+	height: 100px;
+	background-color: #39aae1;
+}
+.rect:first-child{
+	justify-content: flex-start;
+	margin-right: 30px;
+}
+
+/* ASIDE CONSULTA */
+
+.consult{
+	color:#323232;
+}
+.consult .bn_wg_info{
+	border-color: #5c5c5c;
+}
+.consult-item{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #cccccc;
+}
+.consult a.link{
+	color: #0079c7;
+}
+.consult .mark{
+	font-weight: bold;
+}
+.consult .consult-icon{
+	width: 30px;
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #cccccc;
+	color: #fff;
+	margin-right: 10px;
+	transition: background-color 0.2s ease-in;
+}
+
+.consult .consult-icon:hover{
+	background-color:#42b3e5; 
+}
+
+.consult .consult-content{
+	flex: 1;
+}
+
+article{
+	flex:1;
+	min-width: 300px;
+	margin-bottom: 30px;
+	margin-right: 30px;
+}
+article a{
+	text-decoration: none;
+}
+article .post_at,
+article .comments{
+	color:#fff;
+	padding:8px 10px;
+	font-size: 14px;
+}
+article .post_at{
+	background-color: #2b4c99;
+	margin-right: 3px;
+}
+article .comments{
+	background-color: #39aae1;
+}
+article .thumbnail{	
+	margin-top: 30px;
+}
+article .thumbnail img{
+	width:100%;
+	height: auto;
+}
+article .post_title{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	color:#000;
+	font-size: 24px;
+}
+article .post_resume{
+	color:#5c5c5c;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+/* FOOTER */
+footer{
+	background-color: #1e1e1e;
+	color:#fff;
+}
+
+footer .footer_menu{
+	height: auto;
+}
+
+footer .footer_area{
+	flex: 1;
+}
+.ft_area_item{
+	flex: 1;
+	color: inherit;
+}
+.ft_area_item .widget-title-text{color:#fff; font-size: 16px;}
+footer .ft_copy{
+	border-top: 1px solid #2c2c2c;
+	height: 40px; 
+	line-height: 40px;
+	color:#5c5c5c;
+	font-size: 12px;
+	margin-top: 30px;
+}
+footer .widget-body{
+	font-size: 12px;
+}
+/* SECTION MEDICAL CLINICA */
+footer .ft_area_item .widget-body,
+footer .medicenter_contact_title,
+footer .medicenter_cols{
+	font-weight: bold;
+	color: #5c5c5c;
+}
+footer .medicenter_contact_title{color:#5c5c5c;}
+footer .medicenter_cols{
+	flex:1;
+	flex-direction: row;
+	
+}
+
+.medicenter_cols div{
+	flex:1;
+}
+.medicenter_cols div:first-child{
+	margin-right: 20px;
+}
+.medicenter_icons{
+	margin-top: 25px;
+}
+.medicenter_icons a{
+	padding: 
+}
+
+.widget-body .wg_icon{
+	width: 30px;
+	height: 30px;
+	color: #8c8c8c;
+	font-size: 20px;
+	line-height: 30px;
+	background-color: #3c3c3c;
+	text-align: center;
+	margin-right: 10px;
+	transition: background-color 0.2s linear, color 0.2s linear;
+}
+.medicenter_icons .wg_icon:hover{
+	background: #42b3e5;
+	color:#fff;
+}
+/* .face:hover{
+	color:#2b4c99;
+}
+.google:hover{
+	color:#ea4335;
+}
+.twitter:hover{
+	color:#1da1f2;
+}
+.letter:hover{
+	color:#ff812a;
+} */
+footer .post,
+footer .tweets{
+	margin-bottom: 10px;
+}
+/* SECTION ULTIMOS POSTS E TWEETS */
+.post{
+	font-weight: 500;
+	color:#fff;
+	margin-right: 10px;
+}
+.post-arrow{
+	display: inline;
+	margin-right:10px;
+	font-size: 10px;
+}
+.post-arrow i{
+	position: relative;
+	top:20%;
+	color:#fff;
+}
+.post-item{
+	flex: 1;
+}
+.post-item .post-item-content{
+	line-height: 20px;
+}
+.post-item .post-item-date{
+	font-size: 11px;
+	font-weight: bold;
+	color:#0079c7;
+	margin-top: 5px;
 }
