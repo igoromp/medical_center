@@ -74,6 +74,23 @@ header{
 	margin:0;
 	padding: 0;
 }
+.menu .menu-mob{
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;	
+	border-radius: 5px;
+}
+.menu-mob .mob_line{
+		height: 4px;
+		width: 80%;
+		background-color: rgba(0,121,199,0.75);
+}
 .menu ul{
 	display: flex;
 }
@@ -104,7 +121,6 @@ header{
 }
 .banner_headline h1, 
 .banner_headline h2{
-	width: 350px;
 	color: #fff;
 	font-weight: 200;
 	margin:0;
@@ -414,4 +430,293 @@ footer .tweets{
 	font-weight: bold;
 	color:#0079c7;
 	margin-top: 5px;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+	.container{
+		width: 768px;
+		display: flex;
+		justify-content: space-between;
+	}
+	/*MENU*/
+	.logo{
+		margin-left: 15px;
+	}
+	.menu{
+		margin-right:15px;
+	}
+	.menu ul{
+		flex-direction: column;
+		display: none;
+		opacity: 0 ;
+		transition: 0.3s ease;
+		transform: translate(0,-50px);
+    	
+    
+	}
+	.menu-mob{
+		display: flex;
+	}
+
+	.menu .menu-mob{
+		display: flex;
+	}
+	.menu .menu_active{
+		position: absolute;
+    	right: 15px;
+    	background-color: #FFF;
+		display: flex;
+		opacity: 1 ;
+		transition: 0.3s ease;
+		transform: translate(0,0px);
+    	
+	}
+	.menu_active li{
+		border-bottom: 1px solid #39aae1;
+	}
+	.menu_active 
+	.menu .menu-mob 
+	/*BANNER*/
+	.banner_headline h1{
+		margin-left: 15px;
+		font-size: 55px;
+	}
+	.banner_headline h2{
+		margin-left: 15px;
+		font-size: 19px;
+		color: #3c3c3c;
+	}
+
+	/*CONTENT*/
+	#content section .widget{
+		margin-left: 15px;
+	}
+
+	/*ASIDE*/
+	aside{
+		margin-right: 15px;
+	}
+	aside .widget-body{
+		font-size: 14px;
+	}
+
+	/*FOOTER*/
+	.ft_area_item{
+		margin: 0 10px;
+	}
+	.ft_area_item .widget-body{
+		font-size: 13px;
+	}
+	footer .medicenter_cols{
+		flex-direction: column;
+	}
+	footer .medicenter_cols div{
+		margin-bottom: 10px;
+	}
+	.ft_copy{
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 600px){
+
+.container{
+		width: 520px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+/*MENU*/
+header{
+		height: auto;
+}
+.menu ul{
+	flex-direction: column;
+	display: none;
+}
+.menu-mob{
+	display: block;
+}
+.menu .menu-mob{
+		display: flex;
+}
+/*BANNER*/
+.banner_headline h1{
+	margin-left: 20px;
+	font-size: 55px;
+}
+.banner_headline h2{
+	margin-left: 20px;
+	font-size: 19px;
+	color: #3c3c3c;
+}
+#banner .banner_widgets{
+	height: 220px;
+}
+#banner .bn_wg p{
+	display: none;
+}
+#banner .bn_wg {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.bn_wg div{
+	text-align: center;
+}
+
+#banner .bn_wg_button{
+	margin-top: 15px;
+}
+
+/*CONTENT*/
+#content section{
+	margin-left: 15px;
+}
+
+/*ASIDE*/
+#content aside .widget{
+	margin-right: 15px;
+}
+.widget .widget-body span{
+	font-size: 14px;
+}
+.widget .widget-rect{
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+.widget .widget-rect .rect{
+	width: 100%;
+	margin-bottom: 15px;
+}
+.consult{
+	font-size: 12px;
+}
+
+/*FOOTER*/
+.ft_area_item{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.medicenter_cols div{
+	margin-bottom: 10px;
+}
+.post .post-arrow,
+.tweets .post-arrow{
+	display: none;
+}
+footer .mb-invisible{
+	display: none;
+}
+.ft_copy{
+	margin-left: 15px;
+}
+}
+
+@media(max-width: 425px){
+	.container{
+		width: 320px;
+		display: flex;
+		justify-content: space-between;
+	}
+	h1,
+	h2{
+		width: inherit;
+	}
+	/*MENU*/
+	header{
+		height: auto;
+	}
+	.menu ul{
+		flex-direction: column;
+		display: none;
+	}
+	
+	
+	/*BANNER*/
+	#banner{
+		display: flex;
+		height: auto;
+	}
+	#banner .banner_headline h1{
+		
+		font-size: 33px;
+		margin-left: 5px;
+	}
+	#banner .banner_headline h2{
+		font-size: 13px;
+		margin-left: 5px;
+	}
+	#banner .banner_widgets{
+		flex-direction: column;
+		height: auto;
+		margin-top: 10px;
+	}
+	#banner .bn_wg div{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	#banner .bn_wg_title{
+		margin-right: 15px;
+	}
+	#banner .bn_wg_title{
+		flex: 1;
+	}
+	#banner .bn_wg .timetable{
+		display: flex;
+		flex-direction: column;
+		flex: 4;
+	}
+	
+	.bn_wg .timetable .bn_wg_info{
+		width: 100%;
+		font-size: 12px;
+	}
+
+	/*CONTENT*/
+	#content{
+		display: flex;
+		justify-content: center;
+	}
+	#content .container{
+		flex-direction: column;
+	}
+	#content section{
+		margin: 0 15px;
+	}
+	#content section .widget{
+		margin: 0;
+	}
+	#content article{
+		margin:10px auto;
+		min-width: 285px;
+	}
+	#content .news-date{
+		display: flex;
+		flex-direction: row;
+	}
+
+	/*ASIDE*/
+	aside{
+		margin:10px 15px;
+	}
+	/*FOOTER*/
+	footer .container{
+		flex-direction: column;
+	}
+
+	.footer_menu .bn_wg,
+	.footer_menu .flex{
+		display: block;
+	}
+	.footer_area{
+		display: flex;
+		flex-direction: column;
+	}
 }

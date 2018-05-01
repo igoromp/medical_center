@@ -17,7 +17,12 @@
 			</div>
 			<div class="menu">
 				<nav>
-					<ul>
+					<div class="menu-mob">
+						<div class="mob_line"></div>
+						<div class="mob_line"></div>
+						<div class="mob_line"></div>
+					</div> 
+					<ul  id="menu_list" >
 						<li class="active"><a href="">Home</a></li>
 						<li><a href="">blog</a></li>
 						<li><a href="">pages</a></li>
@@ -38,33 +43,41 @@
 			</div>
 			<div class="banner_widgets">
 				<div class="bn_wg sky">
-					<h3 class="bn_wg_title">Casos de Emergência</h3>
-					<p class="bn_wg_content">
-						Se você precisar urgentimente de um medico da Medical Center fora do horário de atendimento, ligue para
-						o número de atendimento de emergência do serviço de emergência.
-					</p>
-					<a href="" class="bn_wg_button">Leia mais</a>
+					<div>
+						<h3 class="bn_wg_title">Casos de Emergência</h3>
+						<p class="bn_wg_content">
+							Se você precisar urgentimente de um medico da Medical Center fora do horário de atendimento, ligue para
+							o número de atendimento de emergência do serviço de emergência.
+						</p>
+						<a href="" class="bn_wg_button">Leia mais</a>
+					</div>
 				</div>
 				<div class="bn_wg info">
-					<h3 class="bn_wg_title">Calendário Médico</h3>
-					<p class="bn_wg_content">
-						Aqui na Medical Center temos uma lista individual de médicos. Clique em Leia mais para ver os serviços e  o calendário atual de nossos médicos
-					</p>
-					<a href="" class="bn_wg_button">Leia mais </a>
+					<div>
+						<h3 class="bn_wg_title">Calendário Médico</h3>
+						<p class="bn_wg_content">
+							Aqui na Medical Center temos uma lista individual de médicos. Clique em Leia mais para ver os serviços e  o calendário atual de nossos médicos
+						</p>
+						<a href="" class="bn_wg_button">Leia mais </a>
+					</div>
 				</div>
 				<div class="bn_wg ocean">
-					<h3 class="bn_wg_title">Horário de Atendimento</h3>
-					<div class="bn_wg_info row">
-						<span class="left">Segunda-Sexta</span>
-						<span class="right">8:00-17:00</span>
-					</div>
-					<div class="bn_wg_info row">
-						<span class="left">Sábado</span>
-						<span class="right">9:30-17:30</span>
-					</div>
-					<div class="bn_wg_info row">
-						<span class="left">Domingo</span>
-						<span class="right">9:30-15:00</span>
+					<div>
+						<h3 class="bn_wg_title">Horário de Atendimento</h3>
+						<div class="timetable">
+							<div class="bn_wg_info row">
+								<span class="left">Segunda-Sexta</span>
+								<span class="right">8:00-17:00</span>
+							</div>
+							<div class="bn_wg_info row">
+								<span class="left">Sábado</span>
+								<span class="right">9:30-17:30</span>
+							</div>
+							<div class="bn_wg_info row">
+								<span class="left">Domingo</span>
+								<span class="right">9:30-15:00</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -179,7 +192,7 @@
 						<div class="widget-title-bar"></div>						
 					</div>
 					<div class="widget-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, possimus.
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, possimus.</span>
 					</div>
 
 					<div class="widget-body consult">
@@ -305,7 +318,7 @@
 									<div class="post-item-date">3 dias atrás.</div>
 								</div>
 							</div>
-							<div class="post flex">
+							<div class="post flex mb-invisible">
 								<div class="post-arrow"><i class="fas fa-arrow-right"></i></div>
 								<div class="post-item">
 									<div class="post-item-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate provident dignissimos optio consequuntur nihil.</div>
@@ -339,7 +352,7 @@
 									</div>
 								</div>
 
-								<div class="tweets flex">
+								<div class="tweets flex mb-invisible">
 									<div class="post-arrow"><i class="fas fa-arrow-right"></i></div>
 									<div class="post-item">
 										<div class="post-item-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ipsum sint animi, pariatur molestias quia inventore incidunt eaque est voluptatem, doloremque dolores eos eveniet sapiente.</div>
@@ -356,5 +369,17 @@
 			</div>
 		</div>
 	</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$('.menu-mob').click(function(){
+		if( !$('#menu_list').hasClass('menu_active') ){
+			$('#menu_list').addClass('menu_active');
+		}else{
+			$('#menu_list').removeClass('menu_active');
+		}
+	});
+	
+</script>
 </body>
 </html>
