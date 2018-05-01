@@ -372,13 +372,11 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-	$('.menu-mob').click(function(){
-		if( !$('#menu_list').hasClass('menu_active') ){
-			$('#menu_list').addClass('menu_active');
-		}else{
-			$('#menu_list').removeClass('menu_active');
-		}
+	$('.menu-mob').click(function(e){
+		$("#menu_list").toggleClass('menu_active');
+		e.preventDefault();
 	});
+	
 	
 </script>
 </body>
